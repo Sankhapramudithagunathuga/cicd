@@ -1,11 +1,10 @@
 version: 0.0               
 os: linux                  
 files:                     
-  - source:/               
-destination: /var/www/html 
-  hooks:                   
-    AfterInstall:          
-      - location: scripts/install_python.sh 
-        timeout: 300       
-        runas: root        
-   
+  - source: /               
+    destination: /home/ec2-user 
+hooks:                   
+  AfterInstall:          
+    - location: scripts/install_python.sh
+      timeout: 300       
+      runas: root

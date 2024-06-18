@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt install -y python3
+sudo yum update -y && sudo yum install -y python3
