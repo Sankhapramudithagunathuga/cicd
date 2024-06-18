@@ -7,6 +7,12 @@ phases:
     commands:
       - sudo apt update -y
       - sudo apt install -y python3
+      - wget terraform.zip https://releases.hashicorp.com/terraform/1.7.4/terraform_1.7.4_linux_amd64.zip
+      - unzip terraform.zip
+      - sudo mv terraform /usr/local/bin/
+      - rm -rf terraform.zip
+      
+
   build:
     commands:
       - echo "Installing Python 3"     
