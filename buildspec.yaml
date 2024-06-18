@@ -4,11 +4,12 @@ phases:
   install:
     runtime-versions:
       python: 3.x
-  build:
     commands:
-      - echo "Installing Python 3"
       - sudo apt update -y
       - sudo apt install -y python3
+  build:
+    commands:
+      - echo "Installing Python 3"     
 artifacts:
   files:
     - '**/*'
