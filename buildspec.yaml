@@ -2,17 +2,13 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - echo Installing NGINX - echo apt-get install NGINX
-      - sudo apt-get update
-      - sudo apt-get install nginx -y
+    runtime-versions:
+      python: 3.x
   build:
     commands:
-      - echo Build started on date
-      - cp index.html /var/www/html
-  post_build:
-    commands:
-      - echo Configuring NGINX
+      - echo "Installing Python 3"
+      - sudo apt update -y
+      - sudo apt install -y python3
 artifacts:
-    files:
-      - "**/*"
+  files:
+    - '**/*'
