@@ -16,9 +16,10 @@ phases:
       - sudo npm install -g typescript@5.1.6
       - sudo apt install ansible -y
       - sudo apt-get install -y jq
+      - wget "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.13.0.zip" -o "awscliv2.zip"
+      - unzip awscliv2.zip
+      - sudo ./aws/install
        
-      
-
   build:
     commands:
       - echo "Installing Python 3"     

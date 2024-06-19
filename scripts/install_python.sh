@@ -14,3 +14,7 @@ sudo yum install -y nodejs
 sudo npm install -g typescript@5.1.6
 sudo yum -y install ansible
 sudo yum -y install jq
+
+wget "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.13.0.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
