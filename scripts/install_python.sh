@@ -15,6 +15,10 @@ sudo npm install -g typescript@5.1.6
 sudo yum -y install ansible
 sudo yum -y install jq
 
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
+wget https://github.com/eksctl-io/eksctl/releases/download/v0.171.0/eksctl_Linux_amd64.tar.gz
+tar -xvf eksctl_Linux_amd64.tar.gz
+sudo mv eksctl /usr/local/bin
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.15.10.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
-sudo ./aws/install
+sudo ./aws/install --update
